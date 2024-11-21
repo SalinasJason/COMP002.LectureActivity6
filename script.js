@@ -9,4 +9,7 @@ form.addEventListener('submit', function(event) { // Adding an event listener "s
 
   let inputColor = document.getElementById('inputColor'); // Declaring a variable named inputColor and using getElementById to find the color input element
   console.log('Selected color:', inputColor.value); // Console logs the value of the color input element
+
+  localStorage.setItem('selectedColor', inputColor.value); // Stores the value of inputColor in the local storage
+  console.log('Color saved:', inputColor.value); // Console logs the color that was saved 
 });
