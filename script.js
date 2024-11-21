@@ -1,5 +1,14 @@
 let form = document.getElementById('myForm'); // Declaring a variable named form and using getElementById to find the HTML element.
 
+
+window.addEventListener('load', function() { // Adding an event listener "load" and it triggers once the page has fully loaded
+    let savedColor = localStorage.getItem('selectedColor'); // Declaring a variable named savedColor and using localStorage.getItem to find it in the local storage.
+
+    if (savedColor) { // Checks if a saved color value exists
+      console.log('Saved color before the page refreshed:', savedColor); // Console logs the saved color value to the console
+    }
+  });
+  
 form.addEventListener('submit', function(event) { // Adding an event listener "submit" and event handler.
   event.preventDefault();  // Prevents the form default action
   console.log('Form default prevented:', event.defaultPrevented);  // Console logs true if the default action was prevented
